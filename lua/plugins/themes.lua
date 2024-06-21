@@ -28,6 +28,7 @@ return {
       },
       highlight_groups = {
         CursorLine = { bg = "#000000", blend = 50 },
+        Comment = { italic = true },
       },
     },
   },
@@ -40,7 +41,7 @@ return {
       vim.g.sonokai_enable_italic = "1"
       vim.g.sonokai_style = "andromeda"
       vim.g.sonokai_colors_override = {
-        bg0 = "#191a23",
+        bg1 = { "#181A1C", "235" },
       }
     end,
   },
