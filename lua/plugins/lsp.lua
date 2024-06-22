@@ -35,7 +35,10 @@ return {
 
       local cmp = require("cmp")
 
-      opts.preselect = cmp.PreselectMode.None
+      opts.completion = {
+        preselect = cmp.PreselectMode.None,
+        completeopt = "menu, menuone, noselect, noinsert",
+      }
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         -- safely select entries with <CR>
