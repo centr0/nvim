@@ -8,6 +8,15 @@ return {
         "autopep8",
         "pyright",
         "typescript-language-server",
+        "gopls",
+      },
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "go",
       },
     },
   },
