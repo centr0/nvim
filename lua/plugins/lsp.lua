@@ -31,6 +31,12 @@ return {
         underline = true,
       },
     },
+    config = function(_, opts)
+      LazyVim.lsp.on_attach(function(client, buffer)
+        -- remove highlighting of words under cursor
+        client.server_capabilities.semanticTokensProvider = nil
+      end)
+    end,
   },
   {
     "hrsh7th/nvim-cmp",
