@@ -5,7 +5,6 @@ return {
     opts = {
       formatters_by_ft = {
         python = { "autopep8" },
-        go = { "goimports", "gofmt" },
       },
     },
   },
