@@ -25,6 +25,7 @@ return {
       variant = "moon",
       styles = {
         transparency = true,
+        italic = false,
       },
       highlight_groups = {
         CursorLine = { bg = "#000000", blend = 100 },
