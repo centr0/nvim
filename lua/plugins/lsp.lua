@@ -34,6 +34,18 @@ return {
         underline = true,
       },
       servers = {
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                autoSearchPaths = true, -- Auto-discover imports
+                useLibraryCodeForTypes = true, -- Use library type info
+                diagnosticMode = "openFilesOnly", -- Limit diagnostics to open files
+                typeCheckingMode = "basic", -- Basic type checking
+              },
+            },
+          },
+        },
         gopls = {
           settings = {
             gopls = {
