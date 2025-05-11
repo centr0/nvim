@@ -26,6 +26,7 @@ return {
       styles = {
         transparency = true,
         italic = false,
+        bold = false,
       },
       highlight_groups = {
         CursorLine = { bg = "#000000", blend = 100 },

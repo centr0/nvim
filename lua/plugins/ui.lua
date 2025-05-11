@@ -29,6 +29,10 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      scroll = {
+        -- disable smooth scrolling
+        enabled = false,
+      },
       dashboard = {
         preset = {
           header = [[
