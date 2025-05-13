@@ -15,3 +15,5 @@ set("n", "+", "<C-a>", { desc = "Increment number" })
 set("n", "-", "<C-x>", { desc = "Decrement number" })
 -- select all
 set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
+
+set("n", "<leader>fs", "<cmd>FzfLua live_grep<CR>", { desc = "Live Grep" })
