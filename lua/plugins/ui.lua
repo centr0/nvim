@@ -29,6 +29,7 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      words = { enabled = false },
       scroll = {
         -- disable smooth scrolling
         enabled = false,

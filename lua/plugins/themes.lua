@@ -49,6 +49,22 @@ return {
     end,
   },
   {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    transparent = true,
+    opts = {
+      style = "storm",
+      on_colors = function(colors)
+        colors.bg = "#000000"
+      end,
+      on_highlights = function(highlights, colors)
+        highlights.CursorLine = {
+          bg = "#000000",
+        }
+      end,
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "rose-pine",

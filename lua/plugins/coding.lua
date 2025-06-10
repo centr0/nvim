@@ -8,4 +8,11 @@ return {
       },
     },
   },
+  {
+    dir = "/home/centro/src/projects/centest.nvim",
+    dev = true,
+    config = function()
+      require("centest").setup({ message = "Local plugin loaded!" })
+    end,
+  },
 }
