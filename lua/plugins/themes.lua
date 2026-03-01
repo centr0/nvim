@@ -29,7 +29,7 @@ return {
         bold = false,
       },
       highlight_groups = {
-        CursorLine = { bg = "#111111", blend = 100 },
+        CursorLine = { bg = "#1e1c2c", blend = 100 },
         Cursor = { bg = "#ffffff", fg = "#000000" },
         Comment = { italic = true },
       },
