@@ -2,6 +2,24 @@ return {
   {
     "github/copilot.vim",
     event = "InsertEnter",
+    init = function()
+      vim.g.copilot_no_tab_map = true
+
+      vim.keymap.set("i", "<C-l>", 'copilot#Accept("")', {
+        expr = true,
+        replace_keycodes = false,
+        desc = "Copilot accept",
+      })
+      vim.keymap.set("i", "<C-j>", "<Plug>(copilot-accept-word)", {
+        desc = "Copilot accept word",
+      })
+      vim.keymap.set("i", "<C-k>", "<Plug>(copilot-accept-line)", {
+        desc = "Copilot accept line",
+      })
+      vim.keymap.set("i", "<C-]>", "<Plug>(copilot-dismiss)", {
+        desc = "Copilot dismiss",
+      })
+    end,
   },
   {
     -- conform for formatting code

@@ -3,6 +3,11 @@
 Important custom keybinds:
 
 - `jk` in insert mode: exit to normal mode
+- Copilot in insert mode:
+  - `<C-l>` accept full suggestion
+  - `<C-j>` accept next word
+  - `<C-k>` accept next line
+  - `<C-]>` dismiss suggestion
 - `<leader>\\`: show diagnostics for the current line
 - `x`: delete character without yanking it
 - `+` / `-`: increment or decrement number under cursor
