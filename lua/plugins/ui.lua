@@ -22,7 +22,7 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
-      -- move explorer window to the right side
+      -- open explorer in the current window
       window = { position = "current" },
     },
   },

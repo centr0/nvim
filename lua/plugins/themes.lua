@@ -1,12 +1,12 @@
 return {
   {
     "rebelot/kanagawa.nvim",
-    lazy = false,
+    lazy = true,
     opts = {},
   },
   {
     "sho-87/kanagawa-paper",
-    lazy = false,
+    lazy = true,
     opts = {
       colors = {
         palette = {
@@ -19,7 +19,7 @@ return {
   },
   {
     "rose-pine/neovim",
-    lazy = false,
+    lazy = true,
     name = "rose-pine",
     opts = {
       variant = "moon",
@@ -37,7 +37,7 @@ return {
   },
   {
     "sainnhe/sonokai",
-    lazy = false,
+    lazy = true,
     opts = {},
     config = function()
       vim.g.sonokai_transparent_background = "1"
