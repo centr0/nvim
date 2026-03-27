@@ -1,10 +1,13 @@
 return {
   {
+    "github/copilot.vim",
+  },
+  {
     -- conform for formatting code
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
-        python = { "black" },
+        python = { "ruff_format" },
       },
     },
   },

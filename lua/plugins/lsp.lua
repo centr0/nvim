@@ -5,7 +5,6 @@ return {
       ensure_installed = {
         "stylua",
         "shfmt",
-        "autopep8",
         "pyright",
         "typescript-language-server",
       },
