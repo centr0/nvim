@@ -1,9 +1,4 @@
 return {
-  -- neovim tmux navigation
-  {
-    "christoomey/vim-tmux-navigator",
-    lazy = false,
-  },
   -- bufferline: change keybinds
   {
     "akinsho/bufferline.nvim",
