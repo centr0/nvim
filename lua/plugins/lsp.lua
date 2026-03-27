@@ -5,6 +5,7 @@ return {
       ensure_installed = {
         "stylua",
         "shfmt",
+        "gopls",
         "pyright",
         "typescript-language-server",
       },
@@ -13,7 +14,12 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-      ensure_installed = {},
+      ensure_installed = {
+        "go",
+        "gomod",
+        "gosum",
+        "gowork",
+      },
     },
   },
   {

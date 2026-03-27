@@ -1,6 +1,7 @@
 return {
   {
     "github/copilot.vim",
+    event = "InsertEnter",
   },
   {
     -- conform for formatting code
@@ -14,6 +15,66 @@ return {
   {
     "nickjvandyke/opencode.nvim",
     version = "*", -- Latest stable release
+    keys = {
+      {
+        "<leader>aa",
+        function()
+          require("opencode").ask("@this: ", { submit = true })
+        end,
+        mode = { "n", "x" },
+        desc = "Ask opencode...",
+      },
+      {
+        "<leader>as",
+        function()
+          require("opencode").select()
+        end,
+        mode = { "n", "x" },
+        desc = "Execute opencode action...",
+      },
+      {
+        "<leader>at",
+        function()
+          require("opencode").toggle()
+        end,
+        mode = { "n", "t" },
+        desc = "Toggle opencode",
+      },
+      {
+        "<leader>ar",
+        function()
+          return require("opencode").operator("@this ")
+        end,
+        mode = { "n", "x" },
+        expr = true,
+        desc = "Add range to opencode",
+      },
+      {
+        "<leader>aR",
+        function()
+          return require("opencode").operator("@this ") .. "_"
+        end,
+        mode = "n",
+        expr = true,
+        desc = "Add line to opencode",
+      },
+      {
+        "<S-C-u>",
+        function()
+          require("opencode").command("session.half.page.up")
+        end,
+        mode = "n",
+        desc = "Scroll opencode up",
+      },
+      {
+        "<S-C-d>",
+        function()
+          require("opencode").command("session.half.page.down")
+        end,
+        mode = "n",
+        desc = "Scroll opencode down",
+      },
+    },
     dependencies = {
       {
         -- `snacks.nvim` integration is recommended, but optional
@@ -46,31 +107,6 @@ return {
       }
 
       vim.o.autoread = true -- Required for `opts.events.reload`
-
-      -- Recommended/example keymaps
-      vim.keymap.set({ "n", "x" }, "<leader>aa", function()
-        require("opencode").ask("@this: ", { submit = true })
-      end, { desc = "Ask opencode…" })
-      vim.keymap.set({ "n", "x" }, "<leader>as", function()
-        require("opencode").select()
-      end, { desc = "Execute opencode action…" })
-      vim.keymap.set({ "n", "t" }, "<leader>at", function()
-        require("opencode").toggle()
-      end, { desc = "Toggle opencode" })
-
-      vim.keymap.set({ "n", "x" }, "<leader>ar", function()
-        return require("opencode").operator("@this ")
-      end, { desc = "Add range to opencode", expr = true })
-      vim.keymap.set("n", "<leader>aR", function()
-        return require("opencode").operator("@this ") .. "_"
-      end, { desc = "Add line to opencode", expr = true })
-
-      vim.keymap.set("n", "<S-C-u>", function()
-        require("opencode").command("session.half.page.up")
-      end, { desc = "Scroll opencode up" })
-      vim.keymap.set("n", "<S-C-d>", function()
-        require("opencode").command("session.half.page.down")
-      end, { desc = "Scroll opencode down" })
     end,
   },
 }
