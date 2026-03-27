@@ -51,10 +51,15 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = false,
-    transparent = true,
+    transparent = false,
     opts = {
       style = "night",
-      on_colors = function(colors) end,
+      on_colors = function(colors)
+        colors.bg = "#111019"
+        colors.bg_dark = "#111019"
+        colors.bg_float = "#111019"
+        colors.bg_sidebar = "#111019"
+      end,
       on_highlights = function(highlights, colors)
         highlights.CursorLine = {}
       end,
