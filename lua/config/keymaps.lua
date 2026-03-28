@@ -1,4 +1,5 @@
 local set = vim.keymap.set
+local copilot_enabled = true
 -- jk keybind escapes out of insert mode -> normal mode
 set("i", "jk", "<esc>", { desc = "Esc out of Insert" })
 -- show line diagnostics
@@ -12,3 +13,14 @@ set("n", "-", "<C-x>", { desc = "Decrement number" })
 set("n", "<leader>sa", "gg<S-v>G", { desc = "Select all" })
 
 set("n", "<leader>fs", "<cmd>FzfLua live_grep<CR>", { desc = "Live Grep" })
+
+set("n", "<leader>cp", function()
+  if copilot_enabled then
+    vim.cmd("Copilot disable")
+    vim.notify("Copilot disabled")
+  else
+    vim.cmd("Copilot enable")
+    vim.notify("Copilot enabled")
+  end
+  copilot_enabled = not copilot_enabled
+end, { desc = "Toggle Copilot" })

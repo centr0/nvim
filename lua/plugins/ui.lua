@@ -43,4 +43,23 @@ return {
       },
     },
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = function(_, opts)
+      table.insert(opts.sections.lualine_x, 2, {
+        "lsp_status",
+        icon = "",
+        show_name = true,
+        ignore_lsp = {},
+        fmt = function(str)
+          str = str:lower():gsub("github", "")
+          str = str:gsub("%s+", " ")
+          return vim.trim(str)
+        end,
+        symbols = {
+          separator = " | ",
+        },
+      })
+    end,
+  },
 }
