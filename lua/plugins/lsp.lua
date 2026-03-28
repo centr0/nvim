@@ -11,6 +11,13 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      servers = {
+        ["*"] = {
+          keys = {
+            { "<c-k>", false, mode = "i" },
+          },
+        },
+      },
       diagnostics = {
         -- remove inline diagnostics
         -- view inline diagnostics w/ <leader>\\

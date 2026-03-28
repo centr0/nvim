@@ -1,7 +1,7 @@
 return {
   {
     "github/copilot.vim",
-    event = "InsertEnter",
+    lazy = false,
     init = function()
       vim.g.copilot_no_tab_map = true
 
@@ -11,12 +11,15 @@ return {
         desc = "Copilot accept",
       })
       vim.keymap.set("i", "<C-j>", "<Plug>(copilot-accept-word)", {
+        remap = true,
         desc = "Copilot accept word",
       })
       vim.keymap.set("i", "<C-k>", "<Plug>(copilot-accept-line)", {
+        remap = true,
         desc = "Copilot accept line",
       })
       vim.keymap.set("i", "<C-]>", "<Plug>(copilot-dismiss)", {
+        remap = true,
         desc = "Copilot dismiss",
       })
     end,
