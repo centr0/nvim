@@ -2,6 +2,10 @@ local set = vim.keymap.set
 local copilot_enabled = true
 -- jk keybind escapes out of insert mode -> normal mode
 set("i", "jk", "<esc>", { desc = "Esc out of Insert" })
+-- Accessibility: repurpose <C-l> from Copilot accept to a predictable
+-- insert-mode jump to end of line. This reduces the need to type closing
+-- delimiters when autopairs has already inserted them.
+set("i", "<C-l>", "<End>", { desc = "Jump to end of line" })
 -- show line diagnostics
 set("n", "<leader>\\", "<cmd> lua vim.diagnostic.open_float()<cr>", { desc = "show line diagnostics" })
 -- x keybind no longer adds deleted character to clipboard
