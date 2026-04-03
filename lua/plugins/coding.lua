@@ -2,43 +2,6 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
-    init = function()
-      vim.g.copilot_no_tab_map = true
-
-      -- Accessibility: use <S-Tab> to accept Copilot only when a suggestion is
-      -- visible. When Copilot is not showing a suggestion, this falls back to
-      -- the editor's normal <S-Tab> behavior instead of overriding it globally.
-      --
-      -- In this setup, the normal <S-Tab> behavior comes from blink.cmp and is:
-      -- - snippet backward jump when a snippet jump target is active
-      -- - otherwise the terminal/editor's plain <S-Tab> behavior
-      --
-      -- This preserves snippet navigation while freeing <C-l> for a right-hand
-      -- "jump to end of line" insert-mode motion.
-      vim.keymap.set("i", "<S-Tab>", function()
-        local suggestion = vim.fn["copilot#GetDisplayedSuggestion"]()
-        if suggestion.text ~= "" then
-          return vim.fn["copilot#Accept"]("")
-        end
-        return "<S-Tab>"
-      end, {
-        expr = true,
-        replace_keycodes = false,
-        desc = "Copilot accept or Shift-Tab fallback",
-      })
-      vim.keymap.set("i", "<C-j>", "<Plug>(copilot-accept-word)", {
-        remap = true,
-        desc = "Copilot accept word",
-      })
-      vim.keymap.set("i", "<C-k>", "<Plug>(copilot-accept-line)", {
-        remap = true,
-        desc = "Copilot accept line",
-      })
-      vim.keymap.set("i", "<C-]>", "<Plug>(copilot-dismiss)", {
-        remap = true,
-        desc = "Copilot dismiss",
-      })
-    end,
   },
   {
     -- conform for formatting code

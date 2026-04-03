@@ -28,3 +28,5 @@ set("n", "<leader>cp", function()
   end
   copilot_enabled = not copilot_enabled
 end, { desc = "Toggle Copilot" })
+set("i", "<C-J>", "<Plug>(copilot-accept-word)")
+set("i", "<S-Tab>", "<Plug>(copilot-accept-line)")
