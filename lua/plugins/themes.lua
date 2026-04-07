@@ -1,5 +1,17 @@
 return {
   {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    opts = {
+      style = "darker",
+      term_colors = true,
+      highlights = {
+        SnacksIndent = { fg = "#3b4048" },
+        SnacksIndentScope = { fg = "#4b5263" },
+      },
+    },
+  },
+  {
     "rebelot/kanagawa.nvim",
     lazy = true,
     opts = {},
@@ -22,14 +34,14 @@ return {
     lazy = true,
     name = "rose-pine",
     opts = {
-      variant = "moon",
+      variant = "",
       styles = {
-        transparency = true,
+        transparency = false,
         italic = false,
         bold = false,
       },
       highlight_groups = {
-        CursorLine = { bg = "#1e1c2c", blend = 100 },
+        -- CursorLine = { bg = "#1e1c2c", blend = 100 },
         Cursor = { bg = "#ffffff", fg = "#000000" },
         Comment = { italic = true },
       },
@@ -54,14 +66,17 @@ return {
     transparent = false,
     opts = {
       style = "night",
+      styles = {
+        comments = { italic = true },
+      },
       on_colors = function(colors)
-        colors.bg = "#111019"
-        colors.bg_dark = "#111019"
-        colors.bg_float = "#111019"
-        colors.bg_sidebar = "#111019"
+        -- colors.bg = "#111019"
+        -- colors.bg_dark = "#111019"
+        -- colors.bg_float = "#111019"
+        -- colors.bg_sidebar = "#111019"
       end,
       on_highlights = function(highlights, colors)
-        highlights.CursorLine = {}
+        -- highlights.CursorLine = {}
       end,
     },
   },
