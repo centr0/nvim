@@ -14,19 +14,8 @@ return {
   {
     "rebelot/kanagawa.nvim",
     lazy = true,
-    opts = {},
-  },
-  {
-    "sho-87/kanagawa-paper",
-    lazy = true,
     opts = {
-      colors = {
-        palette = {
-          -- bg
-          -- highlight line bg
-          sumiInk5 = "#2A2A37",
-        },
-      },
+      theme = "dragon",
     },
   },
   {
@@ -36,12 +25,12 @@ return {
     opts = {
       variant = "",
       styles = {
-        transparency = false,
+        transparency = true,
         italic = false,
         bold = false,
       },
       highlight_groups = {
-        CursorLine = { bg = "#1e1c2c", blend = 100 },
+        CursorLine = { bg = "#14111c", blend = 100 },
         Cursor = { bg = "#ffffff", fg = "#000000" },
         Comment = { italic = true },
       },
