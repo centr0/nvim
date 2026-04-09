@@ -41,7 +41,7 @@ return {
         bold = false,
       },
       highlight_groups = {
-        -- CursorLine = { bg = "#1e1c2c", blend = 100 },
+        CursorLine = { bg = "#1e1c2c", blend = 100 },
         Cursor = { bg = "#ffffff", fg = "#000000" },
         Comment = { italic = true },
       },
@@ -83,7 +83,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "rose-pine",
     },
   },
 }
