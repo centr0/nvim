@@ -1,7 +1,14 @@
 return {
   {
+    "mrcjkb/rustaceanvim",
+    version = "v8.0.5", -- last release compatible with Neovim 0.11
+  },
+  {
     "github/copilot.vim",
     lazy = false,
+    init = function()
+      vim.g.copilot_no_tab_map = true
+    end,
   },
   {
     "saghen/blink.cmp",
@@ -13,7 +20,7 @@ return {
       },
       keymap = {
         preset = "default",
-        ["<C-y>"] = { "select_and_accept" },
+        ["<Tab>"] = { "select_and_accept", "fallback" },
       },
     },
   },
