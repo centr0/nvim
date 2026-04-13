@@ -12,6 +12,11 @@ return {
     },
   },
   {
+    "ayu-theme/ayu-vim",
+    lazy = true,
+    opts = {},
+  },
+  {
     "rebelot/kanagawa.nvim",
     lazy = true,
     opts = {
@@ -65,14 +70,14 @@ return {
         -- colors.bg_sidebar = "#111019"
       end,
       on_highlights = function(highlights, colors)
-        -- highlights.CursorLine = {}
+        highlights.CursorLine = { bg = colors.bg_dark }
       end,
     },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "tokyonight",
     },
   },
 }

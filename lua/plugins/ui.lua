@@ -27,7 +27,7 @@ return {
       words = { enabled = false },
       scroll = {
         -- disable smooth scrolling
-        enabled = true,
+        enabled = false,
       },
       dashboard = {
         preset = {
