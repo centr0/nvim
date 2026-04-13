@@ -1,3 +1,0 @@
-def fake_save_user(user_in: UserIn) -> UserInDB:
-    hashed_password = fake_password_hasher(user_in.password)
-    user_in_db = UserInDB(**user_in.model_dump(), hashed_password=hashed_password)
