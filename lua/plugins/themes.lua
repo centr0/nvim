@@ -22,11 +22,23 @@ return {
       vim.api.nvim_create_autocmd("ColorScheme", {
         pattern = "ayu",
         callback = function()
-          vim.api.nvim_set_hl(0, "Normal", { bg = "#181d28" })
-          vim.api.nvim_set_hl(0, "NormalNC", { bg = "#181d28" })
-          vim.api.nvim_set_hl(0, "SignColumn", { bg = "#181d28" })
-          vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#181d28" })
-          vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c2230" })
+          vim.api.nvim_set_hl(0, "Normal", { bg = "#151519" })
+          vim.api.nvim_set_hl(0, "NormalNC", { bg = "#151519" })
+          vim.api.nvim_set_hl(0, "SignColumn", { bg = "#151519" })
+          vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#151519" })
+          vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1b1b1f" })
+          vim.api.nvim_set_hl(0, "Cursor", { fg = "#151519", bg = "#ffffff" })
+        
+          vim.api.nvim_set_hl(0, "Comment", { fg = "#727983", italic = true })
+          vim.api.nvim_set_hl(0, "Constant", { fg = "#d58ff5" })
+          vim.api.nvim_set_hl(0, "String", { fg = "#bde764" })
+          vim.api.nvim_set_hl(0, "Identifier", { fg = "#67cbe8" })
+          vim.api.nvim_set_hl(0, "Function", { fg = "#e8bb5b" })
+          vim.api.nvim_set_hl(0, "Statement", { fg = "#e68b3f" })
+          vim.api.nvim_set_hl(0, "Keyword", { fg = "#e68b3f" })
+          vim.api.nvim_set_hl(0, "Type", { fg = "#68ccec" })
+          vim.api.nvim_set_hl(0, "Special", { fg = "#e89f52" })
+          vim.api.nvim_set_hl(0, "Operator", { fg = "#dcaa58" })
         end,
       })
     end,
