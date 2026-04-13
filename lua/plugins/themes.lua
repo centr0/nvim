@@ -13,8 +13,23 @@ return {
   },
   {
     "ayu-theme/ayu-vim",
-    lazy = true,
+    lazy = false,
+    priority = 1000,
     opts = {},
+    config = function()
+      vim.g.ayucolor = "mirage"
+
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        pattern = "ayu",
+        callback = function()
+          vim.api.nvim_set_hl(0, "Normal", { bg = "#181d28" })
+          vim.api.nvim_set_hl(0, "NormalNC", { bg = "#181d28" })
+          vim.api.nvim_set_hl(0, "SignColumn", { bg = "#181d28" })
+          vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#181d28" })
+          vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1c2230" })
+        end,
+      })
+    end,
   },
   {
     "rebelot/kanagawa.nvim",
@@ -77,7 +92,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "ayu",
     },
   },
 }
