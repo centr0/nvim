@@ -15,9 +15,10 @@ set("n", "+", "<C-a>", { desc = "Increment number" })
 set("n", "-", "<C-x>", { desc = "Decrement number" })
 -- select all
 set("n", "<leader>sa", "gg<S-v>G", { desc = "Select all" })
-
+set("n", "<leader>ac", function()
+  vim.fn.system({ "tmux", "select-window", "-t", "3" })
+end, { desc = "Switch to tmux window 3 (agent)" })
 set("n", "<leader>fs", "<cmd>FzfLua live_grep<CR>", { desc = "Live Grep" })
-
 set("n", "<leader>cp", function()
   if copilot_enabled then
     vim.cmd("Copilot disable")

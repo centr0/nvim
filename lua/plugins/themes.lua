@@ -28,7 +28,7 @@ return {
           vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "#151519" })
           vim.api.nvim_set_hl(0, "CursorLine", { bg = "#1b1b1f" })
           vim.api.nvim_set_hl(0, "Cursor", { fg = "#151519", bg = "#ffffff" })
-        
+
           vim.api.nvim_set_hl(0, "Comment", { fg = "#727983", italic = true })
           vim.api.nvim_set_hl(0, "Constant", { fg = "#d58ff5" })
           vim.api.nvim_set_hl(0, "String", { fg = "#bde764" })
@@ -57,12 +57,17 @@ return {
     opts = {
       variant = "",
       styles = {
-        transparency = true,
+        transparency = false,
         italic = false,
         bold = false,
       },
       highlight_groups = {
-        CursorLine = { bg = "#14111c", blend = 100 },
+        Normal = { fg = "#c9c4bc", bg = "#0f0f12" },
+        NormalNC = { fg = "#c9c4bc", bg = "#0f0f12" },
+        NormalFloat = { fg = "#c9c4bc", bg = "#151519" },
+        SignColumn = { bg = "#0f0f12" },
+        EndOfBuffer = { bg = "#0f0f12" },
+        CursorLine = { bg = "#151519" },
         Cursor = { bg = "#ffffff", fg = "#000000" },
         Comment = { italic = true },
       },
@@ -104,7 +109,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "ayu",
+      colorscheme = "rose-pine",
     },
   },
 }
